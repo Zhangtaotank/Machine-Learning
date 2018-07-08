@@ -1,0 +1,49 @@
+There are two methods to explain the theory od PAC
+1. Maximum Variance Estimate
+  Variance is the mean squared projection, which is the projection of point on line. It denotes the distance of the projected point
+  and the origin.
+  
+2. Minium Least Squared Error
+  Least Squared Error is the distance of the point and the line.
+  
+  
+  
+  
+Steps of the PCA:
+1. Standardize the data.
+    Whether to standardize the data prior to a PCA on the covariance matrix depends on the measurement scales of the original features. 
+    Since PCA yields a feature subspace that maximizes the variance along the axes, it makes sense to standardize the data, especially, 
+    if it was measured on different scales. Although, all features in the Iris dataset were measured in centimeters, let us continue with 
+    the transformation of the data onto unit scale (mean=0 and variance=1), which is a requirement for the optimal performance of many 
+    machine learning algorithms.
+    
+2. Obtain the Eigenvectors and Eigenvalues from the covariance matrix or correlation matrix, or perform Singular Vector Decomposition.
+    The eigenvectors and eigenvalues of a covariance (or correlation) matrix represent the “core” of a PCA: The eigenvectors (principal
+    components) determine the directions of the new feature space, and the eigenvalues determine their magnitude. In other words,
+    the eigenvalues explain the variance of the data along the new feature axes.
+    
+3. Sort eigenvalues in descending order and choose the k eigenvectors that correspond to the k largest eigenvalues where k is the 
+number of dimensions of the new feature subspace (k≤d).
+4. Construct the projection matrix W from the selected k eigenvectors.
+5. Transform the original dataset X via W to obtain a k-dimensional feature subspace Y.
+
+
+
+
+Singular Vector Decomposition
+While the eigendecomposition of the covariance or correlation matrix may be more intuitiuve, most PCA implementations perform a Singular
+Vector Decomposition (SVD) to improve the computational efficiency. 
+
+
+
+
+Explained Variance
+After sorting the eigenpairs, the next question is “how many principal components are we going to choose for our new feature subspace?”
+A useful measure is the so-called “explained variance,” which can be calculated from the eigenvalues. The explained variance tells 
+us how much information (variance) can be attributed to each of the principal components.
+
+
+
+https://blog.csdn.net/huang1024rui/article/details/46662195
+https://www.comp.nus.edu.sg/~cs5240/lecture/pca.pdf
+https://sebastianraschka.com/Articles/2015_pca_in_3_steps.html
