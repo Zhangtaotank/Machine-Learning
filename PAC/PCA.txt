@@ -1,4 +1,4 @@
-There are two methods to explain the theory od PAC
+There are two methods to explain the theory od PCA
 1. Maximum Variance Estimate
   Variance is the mean squared projection, which is the projection of point on line. It denotes the distance of the projected point
   and the origin.
