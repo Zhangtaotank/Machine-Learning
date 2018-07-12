@@ -1,1 +1,24 @@
 This is Lightxgb.txt
+
+
+  
+01: Introduction to Gradient Boosting
+  
+    Boosting: In selecting the samples for building the models, boosting is a good way to adjust the weights of the samples, it increases the probility of choosing the weak samples to make the learner better. https://www.youtube.com/watch?v=GM3CDQfQ4sw
+  
+  The Gradient Boosting algorithm involves three elements:
+    1. A loss function to be optimized, such as cross entropy for classification or mean squared error for regression problems.
+    2. A weak learner to make predictions, such as a greedily constructed decision tree.
+    3. An additive model, used to add weak learners to minimize the loss function.
+    
+    AdaBoost and related algorithms were recast in a statistical framework and became known as Gradient Boosting Machines. The statistical framework cast boosting as a numerical optimization problem where the objective is to minimize the loss of the model by adding weak learners using a gradient descent like procedure, hence the name.
+  
+    New weak learners are added to the model in an effort to correct the residual errors of all previous trees. The result is a powerful predictive modeling algorithm, perhaps more powerful than random forest.
+    
+02: Introduction to XGBoost
+
+    XGBoost is an implementation of gradient boosted decision trees designed for speed and performance. XGBoost stands for eXtreme Gradient Boosting.
+    https://machinelearningmastery.com/xgboost-python-mini-course/
+    
+    
+  
