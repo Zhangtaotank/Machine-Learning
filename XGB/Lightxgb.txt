@@ -17,8 +17,14 @@ This is Lightxgb.txt
     
 02: Introduction to XGBoost
 
-    XGBoost is an implementation of gradient boosted decision trees designed for speed and performance. XGBoost stands for eXtreme Gradient Boosting.
-    https://machinelearningmastery.com/xgboost-python-mini-course/
+    XGBoost is an implementation of gradient boosted decision trees designed for speed and performance. XGBoost stands for eXtreme Gradient Boosting. In addition to supporting all key variations of the technique, the real interest is the speed provided by the careful engineering of the implementation, including:
+
+      1.Parallelization of tree construction using all of your CPU cores during training.
+      2. Distributed Computing for training very large models using a cluster of machines.
+      3.Out-of-Core Computing for very large datasets that don’t fit into memory.
+      4.Cache Optimization of data structures and algorithms to make best use of hardware.
+
+To be updated if needed!
     
     
   
